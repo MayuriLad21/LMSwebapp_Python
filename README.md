@@ -1,11 +1,13 @@
-------to get required package
+To install required package :
+
 pip install -r requirements.txt
 or
 pip install fastapi uvicorn redis
 pip install sqlalchemy psycopg2-binary
 
 
-------run below command to run the app:
+run below command to run the app:
+
 python -m venv venv
 venv\Scripts\activate.bat
 uvicorn app.main:app --reload   
