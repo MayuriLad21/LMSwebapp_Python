@@ -1,5 +1,5 @@
-from app.models.course import Course
+from app.models.student import Student
 from sqlalchemy.orm import Session
 
 def get_all_courses(db: Session):
-    return db.query(Course).all()
+    return db.query(Student).all()

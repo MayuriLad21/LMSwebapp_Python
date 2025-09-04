@@ -9,14 +9,16 @@ router = APIRouter()
 def get_students(db: Session = Depends(get_db)):
     try:
         students = db.query(Student).all()
-        # Format data for React
         result = [
             {
                 "id": s.id,
-                "name": s.name,
+                "first_name": s.first_name,
+                "last_name": s.last_name,
+                "username": s.username,
                 "email": s.email,
                 "age": s.age,
-                "gender": s.gender
+                "gender": s.gender,
+                "name": s.name  # uses the @property you defined in model
             } for s in students
         ]
         return result

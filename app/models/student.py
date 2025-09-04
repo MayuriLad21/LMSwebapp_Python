@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from app.postgres_client import Base
+from app.pgdb import Base
 
 class Student(Base):
     __tablename__ = "students"
@@ -7,6 +7,7 @@ class Student(Base):
     id = Column(Integer, primary_key=True, index=True)
     first_name = Column(String, nullable=False)
     last_name = Column(String, nullable=False)
+    username = Column(String, unique=True, nullable=False)
     email = Column(String, unique=True, nullable=False)
     age = Column(Integer, nullable=True)
     gender = Column(String, nullable=True)

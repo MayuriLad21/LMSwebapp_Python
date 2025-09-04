@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from app.postgres_client import Base
+from app.pgdb import Base
 
 class Course(Base):
     __tablename__ = "courses"

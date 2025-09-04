@@ -1,4 +1,5 @@
-from app.postgres_client import SessionLocal
+# from app.postgres_client import SessionLocal
+from app.pgdb import SessionLocal
 
 # Dependency to get DB session
 def get_db():
